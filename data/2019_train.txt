@@ -1,0 +1,3 @@
+/content/darknet/data/obj/1.jpg
+/content/darknet/data/obj/2.jpg
+/content/darknet/data/obj/3.jpg
