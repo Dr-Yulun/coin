@@ -1,4 +1,4 @@
-classes= 1
+classes= 6
 train  = data/2019_train.txt
 valid  = data/2019_val.txt
 #difficult = data/difficult_2019_test.txt
