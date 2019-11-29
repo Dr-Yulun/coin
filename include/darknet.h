@@ -603,6 +603,7 @@ typedef struct list{
 
 pthread_t load_data(load_args args);
 list *read_data_cfg(char *filename);
+list *read_data_cfg2(char *filename);
 list *read_cfg(char *filename);
 unsigned char *read_file(char *filename);
 data resize_data(data orig, int w, int h);

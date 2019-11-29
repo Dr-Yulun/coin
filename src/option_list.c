@@ -32,6 +32,34 @@ list *read_data_cfg(char *filename)
     return options;
 }
 
+list *read_data_cfg2(char *filename)
+{
+    FILE *file = fopen(filename, "r");
+    if(file == 0) file_error(filename);
+    char *line;
+    int nu = 0;
+    list *options = make_list();
+    while((line=fgetl(file)) != 0){
+        ++ nu;
+        //strip(line);
+        switch(line[0]){
+            case '\0':
+            case '#':
+            case ';':
+                free(line);
+                break;
+            default:
+                if(!read_option(line, options)){
+                    fprintf(stderr, "Config file error line %d, could parse: %s\n", nu, line);
+                    free(line);
+                }
+                break;
+        }
+    }
+    fclose(file);
+    return options;
+}
+
 metadata get_metadata(char *file)
 {
     metadata m = {0};
@@ -102,6 +130,14 @@ char *option_find(list *l, char *key)
     return 0;
 }
 char *option_find_str(list *l, char *key, char *def)
+{
+    char *v = option_find(l, key);
+    if(v) return v;
+    if(def) fprintf(stderr, "%s: Using default '%s'\n", key, def);
+    return def;
+}
+
+char *option_find_str2(list *l, char *key, char *def)
 {
     char *v = option_find(l, key);
     if(v) return v;
