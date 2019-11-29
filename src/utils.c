@@ -319,7 +319,8 @@ void strip2(char *s)
     size_t offset = 0;
     for(i = 0; i < len; ++i){
         char c = s[i];
-        if(c=='\t'||c=='\n') ++offset;
+        if(c=='*') s[i-offset] = ' ';
+		else if(c==' '||c=='\t'||c=='\n') ++offset;
         else s[i-offset] = c;
     }
     s[len-offset] = '\0';
