@@ -30,6 +30,7 @@ void find_replace(char *str, char *orig, char *rep, char *output);
 void malloc_error();
 void file_error(char *s);
 void strip(char *s);
+void strip2(char *s);
 void strip_char(char *s, char bad);
 list *split_str(char *s, char delim);
 char *fgetl(FILE *fp);
