@@ -3,5 +3,5 @@ train  = data/2019_train.txt
 valid  = data/2019_val.txt
 #difficult = data/difficult_2019_test.txt
 names = data/voc.names
-backup = backup/weights
+backup = '/content/drive/My Drive/backup'
 
