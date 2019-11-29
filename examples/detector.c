@@ -7,7 +7,7 @@ void train_detector(char *datacfg, char *cfgfile, char *weightfile, int *gpus, i
 {
     list *options = read_data_cfg(datacfg);
     list *options2 = read_data_cfg2(datacfg);
-    char *train_images = option_find_str(options, "train", "data/train.list");
+    char *train_images = option_find_str2(options, "train", "data/train.list");
     char *backup_directory = option_find_str(options2, "backup", "/backup/");
 
     srand(time(0));
