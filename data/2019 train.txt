@@ -23,6 +23,11 @@
 /content/coin/data/obj/3.jpg
 /content/coin/data/obj/30.jpg
 /content/coin/data/obj/31.jpg
+/content/coin/data/obj/32.jpg
+/content/coin/data/obj/33.jpg
+/content/coin/data/obj/34.jpg
+/content/coin/data/obj/35.jpg
+/content/coin/data/obj/36.jpg
 /content/coin/data/obj/37.jpg
 /content/coin/data/obj/38.jpg
 /content/coin/data/obj/39.jpg
