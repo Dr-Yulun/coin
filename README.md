@@ -1,1 +1,1 @@
-This is the MDSP 
+Digital Image Processing Course Homework
